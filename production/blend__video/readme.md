@@ -1,8 +1,22 @@
-AUDIO_INPUT_FILE = "../media/audio"
-TRACK_MIN_DUR = 15
-TRACK_MAX_DUR = 6 * 60
-PAN_TRACK_1 =
-PAN_TRACK_2 =
-PAN_TRACK_3 =
-OUTPUT_FORMAT = "flac"  # Either "mp3" or "flac".
-AUDIO_OUTPUT_PATH = "../output/temp"
+## Example Usage
+
+```
+# Blend Video
+# //////////////////////////////
+
+print "blending video..."
+
+python blend__video.py \
+  --audio-input-dir="media/audio" \
+  --vid-input-dir="media/video" \
+  --vid-duration="(30,60)" \
+  --opacity=".4" \
+  --blend-mode-1="name-of-blend-mode" \
+  --blend-mode-2="name-of-blend-mode" \
+  --output="path/to/output" \
+ &&
+ ```
+ 
+*to do*
+ - write about each flag
+ - possibly include something where you can control layers?
