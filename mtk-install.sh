@@ -11,7 +11,7 @@
 # servers) at the system level. You may of course choose to install this within
 # a virtual environment.
 #
-# As new scripts are added, we recommend adding installation requirements here!
+# As new scripts are added, we recommend adding installation scripts here!
 #
 ###############################################################################
 
