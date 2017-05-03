@@ -34,7 +34,7 @@ Both of these are used to input content into the script. When audio is imported,
 ### Settings
 `--layers="yes"`
 
-Including this argument will allow you to control video layers in the script.
+Including this argument will allow you to control video layers in the script. If this is selected, `--vid-input-dir` should point to a folder with three sub-folders "layer0", "layer1", and "layer2". The folder can live anywhere, but the names are hard coded to correspond to their position, with "layer0" being the top-most frame.
 
 `--vid-duration="(x,y)"`
 
