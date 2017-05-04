@@ -1,4 +1,4 @@
-# blend__video
+# random-blend__video
 This script is used to randomly blend videos from a specified folder.
 
 ![illustration](image.png)
@@ -36,19 +36,21 @@ These arguments are used to input audio or video into the script. You can point 
 ### Settings
 `--layers="  "`
 
-Including this argument will allow you to control video layers in the script. `--layers="no"` will deactivate it.
+Including this argument will allow you to control video layers in the script. Setting the value to `"no"` will deactivate this feature.
 
-If you want to do this, do the following things:
+If you want to use this feature, do the following steps:
 
-1. Create a directory (call if whatever you want)
+1. Create a directory (call it whatever you want)
 2. Make three sub-directories called layer-1, layer-2 and layer-3
 3. Link the directory to `output-dir`
 
 Those three folders correspond to video hierarchy in the layering process, layer-1 being on top.
 
-`--vid-input-dir` should point to a folder with three sub-folders "layer0", "layer1", and "layer2". The folder can live anywhere, but the names are hard coded to correspond to their position, with "layer0" being the top-most frame.
+`--vid-input-dir="  "`
 
-`--vid-duration="   "`
+This should point to a folder with three sub-folders "layer0", "layer1", and "layer2". The folder can live anywhere, but the names are hard coded to correspond to their position, with "layer0" being the top-most frame.
+
+`--vid-duration="  "`
 
 How long you want the outputted clips to be. This is measured in seconds. It can either be a single number -- `(60)` or a range -- `(60,120)`.
 

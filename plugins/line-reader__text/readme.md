@@ -2,6 +2,9 @@
 
 Reads a line off of a text file. That's it.
 
+![illustration](image.png)
+
+
 ## Example Usage
 ```
 python line-reader__text.py \
