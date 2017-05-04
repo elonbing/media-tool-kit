@@ -1,4 +1,4 @@
-# blend__audio
+# random-blend__audio
 Blends a variable number of audio tracks
 
 ![illustration](image.jpg)

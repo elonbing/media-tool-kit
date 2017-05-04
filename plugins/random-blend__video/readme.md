@@ -1,5 +1,5 @@
 # random-blend__video
-This script is used to randomly blend videos from a specified folder.
+Randomly blends 3 videos from a specified folder.
 
 ![illustration](image.png)
 
