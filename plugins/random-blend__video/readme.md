@@ -1,6 +1,8 @@
 # blend__video
 This script is used to randomly blend videos from a specified folder.
 
+![illustration](image.png)
+
 ## Example Usage
 
 ```
@@ -24,15 +26,15 @@ python blend__video.py \
 ## Arguments
 
 ### Inputs
-`--audio-input="path/to/audio"`
+`--audio-input="  "`
 
-`--vid-input-dir="path/to/video"`
+`--vid-input-dir="  "`
 
 These arguments are used to input audio or video into the script. You can point `--audio-input` to a file or to a directory (where it will select a random file)
 
 
 ### Settings
-`--layers="yes"`
+`--layers="  "`
 
 Including this argument will allow you to control video layers in the script. `--layers="no"` will deactivate it.
 
@@ -46,9 +48,9 @@ Those three folders correspond to video hierarchy in the layering process, layer
 
 `--vid-input-dir` should point to a folder with three sub-folders "layer0", "layer1", and "layer2". The folder can live anywhere, but the names are hard coded to correspond to their position, with "layer0" being the top-most frame.
 
-`--vid-duration="(x,y)"`
+`--vid-duration="   "`
 
-The duration of the outputted clip.
+How long you want the outputted clips to be. This is measured in seconds. It can either be a single number -- `(60)` or a range -- `(60,120)`.
 
 `--opacity=""`
 
