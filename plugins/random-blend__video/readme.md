@@ -10,7 +10,7 @@ This script is used to randomly blend videos from a specified folder.
 print "blending video..."
 
 python blend__video.py \
-  --audio-input-dir="media/audio" \
+  --audio-input="media/audio" \
   --vid-input-dir="media/video" \
   --vid-duration="(30,60)" \
   --opacity=".4" \
@@ -24,17 +24,27 @@ python blend__video.py \
 ## Arguments
 
 ### Inputs
-`--audio-input-dir="path/to/audio"`
+`--audio-input="path/to/audio"`
 
 `--vid-input-dir="path/to/video"`
 
-Both of these are used to input content into the script. When audio is imported, only one file will be randomly chosen. The amount of videos to blend is variable.
+These arguments are used to input audio or video into the script. You can point `--audio-input` to a file or to a directory (where it will select a random file)
 
 
 ### Settings
 `--layers="yes"`
 
-Including this argument will allow you to control video layers in the script. If this is selected, `--vid-input-dir` should point to a folder with three sub-folders "layer0", "layer1", and "layer2". The folder can live anywhere, but the names are hard coded to correspond to their position, with "layer0" being the top-most frame.
+Including this argument will allow you to control video layers in the script. `--layers="no"` will deactivate it.
+
+If you want to do this, do the following things:
+
+1. Create a directory (call if whatever you want)
+2. Make three sub-directories called layer-1, layer-2 and layer-3
+3. Link the directory to `output-dir`
+
+Those three folders correspond to video hierarchy in the layering process, layer-1 being on top.
+
+`--vid-input-dir` should point to a folder with three sub-folders "layer0", "layer1", and "layer2". The folder can live anywhere, but the names are hard coded to correspond to their position, with "layer0" being the top-most frame.
 
 `--vid-duration="(x,y)"`
 
@@ -56,9 +66,3 @@ The script then blends the two first videos with the third. This handles what bl
 `--output-dir="path/to/output"`
 
 This handles where the script will put the final outputted clip. It may be reused by another script in the controller if needed!
-
-## Other Notes
-
-### Layers
-
-###

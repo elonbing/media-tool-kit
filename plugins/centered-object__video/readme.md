@@ -1,5 +1,7 @@
 # centered-object__video
-This is a template for placing an object (video, image, svg) in the middle of a video. There is a setting that also allows the user to change the background color.
+This places an object (video, image, svg) in the middle of a video. There is a setting that also allows the user to change the background color.
+
+✋👽 ✋
 
 ## Example Usage
 
@@ -32,11 +34,11 @@ Can accept either directories (will choose at random) or specific files.
 
 `--object-width=""`
 
-The width of an object.
+Controls the object width.
 
 `--aspect-ratio=""`
 
-The size of the video.
+Lets you set the size of the outputted video.
 
 `--vid-duration="(30,60)"`
 

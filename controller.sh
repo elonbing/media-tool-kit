@@ -9,17 +9,19 @@
 #
 ###############################################################################
 
-# Initialize
-source variables
-cat ascii.txt
-print "executing script..."
-
-
-# Script Name
-# //////////////////////////////
+# Initialize Media Tool Kit
+print "initializing Media Tool Kit"
+source _app/variables.sh
+cat _app/splash.txt
 
 # Script Name
 # //////////////////////////////
+(script code goes here)
 
 # Script Name
 # //////////////////////////////
+(script code goes here)
+
+# Script Name
+# //////////////////////////////
+(script code goes here)
