@@ -14,6 +14,7 @@ print "placing an object in the middle of a video frame..."
 python blend__video.py \
   --audio-input="media/video" \
   --object-input="media/image" \
+  --background-color="#fff" \
   --object-width="600" \
   --aspect-ratio="1280x600" \
   --vid-duration="(30,60)" \
@@ -32,19 +33,25 @@ Can accept either directories (will choose at random) or specific files.
 
 Can accept either directories (will choose at random) or specific files.
 
-`--object-width=""`
+`--object-width="  "`
 
 Controls the object width.
 
-`--aspect-ratio=""`
+`--aspect-ratio="  "`
 
 Lets you set the size of the outputted video.
 
-`--vid-duration="(30,60)"`
+[list recommended sizes of video]
+
+`--vid-duration="  "`
 
 Duration of the Video
 
-`--opacity=".4"`
+`--background-color="  "`
+
+The background color of the video. Accepts Hex or RGBA values.
+
+`--opacity="  "`
 
 Opacity of the Object
 
