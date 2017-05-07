@@ -1,5 +1,7 @@
 Media tool kit is a scripting platform for software based art.
 
+![illustration](_app/mtk.png)
+
 It's based around a shell script called `controller.sh` where you can call scripts (across a variety of different languages) to perform sequential tasks. We refer to these scripts as `plugins` in the context of this platform.
 
 ## How it Works
