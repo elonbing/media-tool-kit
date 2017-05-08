@@ -1,7 +1,7 @@
-# centered-object__video
-This places an object (video, image, svg) in the middle of a video. There is a setting that also allows the user to change the background color.
+# centered-object-video
+This places an object (video, image, svg) in the middle of a video. There is a setting that also allows the user to change the background to a color, image, or video.
 
-✋👽 ✋
+![illustration](image.png)
 
 ## Example Usage
 
@@ -25,13 +25,13 @@ python blend__video.py \
 
  ## Arguments
 
-`--audio-input="path/to/audio"`
+`--audio-input="  "`
 
-Can accept either directories (will choose at random) or specific files.
+Can accept either directories (will choose one file at random) or a specific file.
 
-`--object-input="media/image"`
+`--object-input="  "`
 
-Can accept either directories (will choose at random) or specific files.
+Can accept either directories (will choose one file at random) or specific files.
 
 `--object-width="  "`
 
@@ -41,20 +41,24 @@ Controls the object width.
 
 Lets you set the size of the outputted video.
 
-[list recommended sizes of video]
+Here's a good list of recommended sizing and aspect ratios. https://support.brightcove.com/en/video-cloud/docs/optimal-video-dimensions
 
 `--vid-duration="  "`
 
-Duration of the Video
+Duration of the outputted video. This will be treated in seconds. You can write a single, definitive number ( eg. `45`) or a range that will be randomly selected when run (eg. `(30,60)`).
 
 `--background-color="  "`
 
-The background color of the video. Accepts Hex or RGBA values.
+The background color of the video. Accepts Hex or RGBA values. Setting this value as null makes the background transparent.
+
+`--background-video="  "`
+
+Allows you to place a secondary video in the background. By default it should fill the screen entirely.
 
 `--opacity="  "`
 
-Opacity of the Object
+Opacity of the centered object.
 
-`--output-dir="output"`
+`--output-dir="   "`
 
 The directory that the completed thing will output to.
