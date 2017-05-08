@@ -58,25 +58,24 @@ Each plug-in has it's own set of documentation so that command-line arguments an
 
 ## Included Plugins
 
-Below are the plug-ins that are currently included with MTK along with what they do.
+Below are the plug-ins that are currently included with MTK along with what they do. More documentation about their functionality and use can be found in their respective readme's under the `/plugins` folder.
 
 ### Audio
 - `random-audio-blend`
-Blends random audio tracks together (source)
 
 ### Video
 - `random-video-blend`
 - `centered-object-video`
 - `video-segment-splitter`
 
-### image
+### Image
 - `video-frame-splitter`
 
 ## Upload scripts
 These are scripts that are designed to upload content to a variety of different sources. The current web apps that we included scripts in MTK for are:
-- `upload-to-youtube`Youtube
-- Tumblr
-- Twitter
-- Vidme
+- `upload-to-youtube`
+- `upload-to-tumblr`
+- `upload-to-twitter`
+- `upload-to-vidme`
 
 More may come soon!
