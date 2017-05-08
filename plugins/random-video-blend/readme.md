@@ -1,4 +1,4 @@
-# random-blend__video
+# random-video-blend
 Randomly blends 3 videos from a specified folder.
 
 ![illustration](image.png)
