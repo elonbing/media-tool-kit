@@ -1,6 +1,8 @@
-# Autodatamosh
+# datamosh-video
 
-An automatic datamoshing script for AVI videos.
+An automatic datamoshing script for AVI videos. Written by Joe Friedl.
+
+<img src="example.gif" width="500">
 
 ## Getting Started
 
@@ -18,6 +20,9 @@ You're ready to break stuff!
 You'll need to create an AVI video using an MPEG-4 codec. You can do
 that with a transcoding tool like [ffmpeg](https://www.ffmpeg.org/),
 or with some video editing software.
+
+Here's an example snippet doing just that:
+`ffmpeg -i /path/to/video.xxx -c:v mpeg4 -vtag xvid /path/to/output.avi`
 
 ### Breaking Stuff
 
@@ -85,7 +90,10 @@ they contain audio data. Leaving the audio in can also be fun, however.
 
 ## Examples
 
-To do a standard datamosh using regular files for input and output:
+There are examples of videos datamoshed by this script in
+[this playlist](https://www.youtube.com/playlist?list=PLfQLhVDCKp4kMEfMA6hbP0dIEOmvDMAdD).
+
+**To do a standard datamosh using regular files for input and output:**
 
 ```bash
 ./autodatamosh.pl -i input.avi -o output.avi
@@ -98,5 +106,15 @@ using stdin for the input and stdout for the output:
 cat input.avi | ./autodatamosh.pl -dprob .5 -dmin 5 -dmax 30 > output.avi
 ```
 
-There are examples of videos datamoshed by this script in
-[this playlist](https://www.youtube.com/playlist?list=PLfQLhVDCKp4kMEfMA6hbP0dIEOmvDMAdD).
+### Using in Media Tool Kit
+
+Here's a snippet you can use in your control script using the standard Media Tool Kit syntax.
+
+```
+perl ./datamosh.pl \
+  -i /path/to/input.avi \
+  -dprob .5 \
+  -dmin 5 \
+  -dmax 30 \
+  > /path/to/output.avi
+```
