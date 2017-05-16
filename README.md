@@ -3,7 +3,7 @@ Media tool kit is a language-agnostic scripting platform for making software bas
 
 ![illustration](_app/mtk.png)
 
-At its core, this platform is based around a shell script called `controller.sh`. In this script, you can arrange any number of task-specific scripts to perform a sequence of actions. We refer to these scripts as `plugins` in the context of this platform.
+At its core, this platform is based around a shell script called `controller.sh`. In this script, you can arrange any number of task-specific scripts to perform a sequence of actions. We refer to these types of scripts as `plugins` in the context of this platform.
 
 Since the control script suggests standardized way of invoking plugins, it's now fairly easy to use and reuse a wide variety of media-manipulating scripts!
 
@@ -60,16 +60,24 @@ Each plug-in has it's own set of documentation so that command-line arguments an
 
 Below are the plug-ins that are currently included with MTK along with what they do. More documentation about their functionality and use can be found in their respective readme's under the `/plugins` folder.
 
+Note that some of these scripts are modified versions of open-source and publically availiable software. When applicable the original authors are credited.
+
 ### Audio
-- `random-audio-blend`
+- `random-audio-blend` - Blends audio files together
 
 ### Video
-- `random-video-blend`
-- `centered-object-video`
-- `video-segment-splitter`
+- `random-video-blend` - Blends three different videos together
+- `centered-object-video` - Places an image or video in the middle of a video file
+- `video-segment-splitter` - Splits a video into multiple parts
+- `datamosh-video` - Destroys avi videos
 
 ### Image
-- `video-frame-splitter`
+- `video-frame-splitter` - Splices frames from a video into images
+
+### Text
+- `line-reader` - Prints a line from a specified text file
+- `youtube-cc` - Prints a closed caption from a random youtube video
+
 
 ## Upload scripts
 These are scripts that are designed to upload content to a variety of different sources. The current web apps that we included scripts in MTK for are:

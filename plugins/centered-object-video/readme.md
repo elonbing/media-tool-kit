@@ -62,3 +62,6 @@ Opacity of the centered object.
 `--output-dir="   "`
 
 The directory that the completed thing will output to.
+
+## Resources
+https://video.stackexchange.com/questions/12105/add-an-image-in-front-of-video-using-ffmpeg
