@@ -56,31 +56,38 @@ And that's it! It's essentially a more standardized way of manually triggering s
 
 Each plug-in has it's own set of documentation so that command-line arguments and syntax can be made clear!
 
-## Included Plugins
+## Plugins
 
-Below are the plug-ins that are currently included with MTK along with what they do. More documentation about their functionality and use can be found in their respective readme's under the `/plugins` folder.
+Plugins may be written in multiple languages, but we try to stick with Python, Javascript and Bash/Perl.
 
 Note that some of these scripts are modified versions of open-source and publically availiable software. When applicable the original authors are credited.
 
-### Audio
+
+### Included Plugins
+Further documentation use can be found in their respective readme's.
+
+**Audio**
 - `random-audio-blend` - Blends audio files together
 
-### Video
+**Video**
 - `random-video-blend` - Blends three different videos together
 - `centered-object-video` - Places an image or video in the middle of a video file
 - `video-segment-splitter` - Splits a video into multiple parts
 - `datamosh-video` - Destroys avi videos
 
-### Image
+**Image**
 - `video-frame-splitter` - Splices frames from a video into images
 
-### Text
+**Text**
 - `line-reader` - Prints a line from a specified text file
-- `youtube-cc` - Prints a closed caption from a random youtube video
+- `random-youtube-cc` - Prints a closed caption from a random youtube video
+- `random-facebook-status` - Prints a random, public facebook status
 
 
 ## Upload scripts
-These are scripts that are designed to upload content to a variety of different sources. The current web apps that we included scripts in MTK for are:
+These are scripts that are designed to upload content to a variety of different sources. They can be found in the `/uploaders` directory.
+
+The current web apps that we included scripts in MTK for are:
 - `upload-to-youtube`
 - `upload-to-tumblr`
 - `upload-to-twitter`
