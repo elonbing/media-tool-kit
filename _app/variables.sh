@@ -27,9 +27,14 @@ RECENT_FILE_IN_DIR="$(ls -t | head -n1)"
 # Random Integer
 RANDOM_NUM="$((1 + RANDOM % 9))"
 
-# Test Varaibles Within Variables
-#RANDOM_NUM="$((1 + RANDOM % 9))"
-#TEST="I'm a Varible in a String! $RANDOM_NUM"
-#echo "I'm a $TEST another $RANDOM_NUM"
 
-echo "${RANDOM_FILE_IN_DIR}"
+# Assorted Tests
+# //////////////////////////////
+
+# Test Bash Variables Within Variables
+# RANDOM_NUM="$((1 + RANDOM % 9))"
+# TEST="I'm a Varible in a String! $RANDOM_NUM"
+# echo "I'm a $TEST another $RANDOM_NUM"
+
+# Example printing the output of a python script inside of a bash command
+#echo "$(python example.py)"
