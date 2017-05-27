@@ -66,19 +66,19 @@ Note that some of these scripts are modified versions of open-source and publica
 ### Included Plugins
 Further documentation use can be found in their respective readme's.
 
-**Audio**
+#### Audio
 - `random-audio-blend` - Blends audio files together
 
-**Video**
+#### Video
 - `random-video-blend` - Blends three different videos together
 - `centered-object-video` - Places an image or video in the middle of a video file
 - `video-segment-splitter` - Splits a video into multiple parts
 - `datamosh-video` - Destroys avi videos
 
-**Image**
+#### Image
 - `video-frame-splitter` - Splices frames from a video into images
 
-**Text**
+#### Text
 - `line-reader` - Prints a line from a specified text file
 - `random-youtube-cc` - Prints a closed caption from a random youtube video
 - `random-facebook-status` - Prints a random, public facebook status
