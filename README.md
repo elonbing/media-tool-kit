@@ -96,14 +96,14 @@ The current web apps that we included scripts in MTK for are:
 ### Adding new Plugins
 When adding a new script to the plugins section, make sure to follow the following rough guidelines
 
-####Argument Syntax
+#### Argument Syntax
 
 Scripts should ideally be treated as CLI's. This will make it easier for all variables to be managed directly within the main control script.
 
 Arguments should be verbose and variables should be contained within double quotes. `plugin.py --argument1="variable" --argument2="variable"``
 
 
-####Documentation
+#### Documentation
 
 Don't forget to document the plugin so other people know how to use it. I'd just copy another plugin's docs and edit from there. I would also add an example of the script being used in the controller like the example below.
 
