@@ -3,11 +3,11 @@ Media tool kit is a language-agnostic scripting platform for making software bas
 
 ![illustration](_app/mtk.png)
 
-At its core, this platform is based around a shell script called `controller.sh`. In this script, you can arrange any number of task-specific scripts to perform a sequence of actions. We refer to these types of scripts as `plugins` in the context of this platform.
-
-Since the control script suggests standardized way of invoking plugins, it's now fairly easy to use and reuse a wide variety of media-manipulating scripts!
+It's based around a shell script called `controller.sh`. In it you can invoke a variety of task-specfic scripts that can help you build neat things.
 
 ## How it Works
+The control script is simply a standardized way of running terminal commands with the main goal of making things a bit more readable.
+
 Let's take a look at a sample control script. You can follow along by opening up the `example-controller.sh` file included in the root directory.
 
 **In this example, the controller will:**
@@ -84,7 +84,7 @@ Further documentation use can be found in their respective readme's.
 - `random-facebook-status` - Prints a random, public facebook status
 
 
-## Upload scripts
+### Upload scripts
 These are scripts that are designed to upload content to a variety of different sources. They can be found in the `/uploaders` directory.
 
 The current web apps that we included scripts in MTK for are:
@@ -93,4 +93,24 @@ The current web apps that we included scripts in MTK for are:
 - `upload-to-twitter`
 - `upload-to-vidme`
 
-More may come soon!
+### Adding new Plugins
+When adding a new script to the plugins section, make sure to follow the following rough guidelines
+
+####Argument Syntax
+
+Scripts should ideally be treated as CLI's. This will make it easier for all variables to be managed directly within the main control script.
+
+Arguments should be verbose and variables should be contained within double quotes. `plugin.py --argument1="variable" --argument2="variable"``
+
+
+####Documentation
+
+Don't forget to document the plugin so other people know how to use it. I'd just copy another plugin's docs and edit from there. I would also add an example of the script being used in the controller like the example below.
+
+```
+python random-facebook-status.py \
+  --print-to-file="yes" \
+  --whitelist="whitelist.txt"
+  --character-limit="(5, 60)"
+  --output-dir="media/text"
+```

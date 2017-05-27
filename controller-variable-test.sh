@@ -16,5 +16,12 @@ cat _app/splash.txt
 
 # Script Name
 # //////////////////////////////
-echo "doing a thing..."
-# command goes here
+echo ${RANDOM_FILE_IN_DIR}
+
+# Script Name
+# //////////////////////////////
+echo ${RECENT_FILE_IN_DIR}
+
+# Script Name
+# //////////////////////////////
+echo ${RANDOM_NUM}
