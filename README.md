@@ -26,7 +26,7 @@ python random-video-blend.py \
   --opacity=".4" \
   --blend-mode-1="name-of-blend-mode" \
   --blend-mode-2="name-of-blend-mode" \
-  --output="/output" \
+  --output-dir="/output"
  &&
  ```
 You'll notice that the as the `random-video-blend` script is called, the command-line arguments are listed out and fed corresponding variables.

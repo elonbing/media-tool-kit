@@ -9,10 +9,9 @@ Prints a random Facebook status as text.
 ## Example Usage
 ```
 python random-facebook-status.py \
-  --print-to-file="yes" \
-  --whitelist="whitelist.txt"
   --character-limit="(5, 60)"
   --output-dir="media/text"
+  --save-to-file
 ```
 
 ## Configuration
@@ -23,22 +22,19 @@ This plugin uses the Facebook API. You will need to have a Facebook account in o
 
 ## Arguments
 
-`--number-of-lines=" "`
+`--character-limit="  "`
 
-The number of lines that you want printed out. For a variable number, use `(x,y)`.
-
-`---print-to-file="  "`
-
-Using `yes` will output as a .txt. No prints it in the console. Use no when using in other scripts.
+Limits the output to a certain range of characters.
 
 `--output-dir="  "`
 
 Not specifying an output directory outputs a .txt in the directory that the script is in.
 
-`--whitelist="  "`
+`--save-to-file`
 
-This can either point to a set of words (eg. `(word, word, word)`) or point to a whitelist. There is an example already set up for you :-).
+Using this flag will output generated text as a .txt file.
 
-`--character-limit="  "`
-
-Limits the output to a certain range of characters.
+## Development Notes
+- A blacklist should exist as a simple blacklist.txt file.
+- Include documentation on authorizing w/ Facebook
+- Something I found that might help? https://github.com/dfreelon/fb_scrape_public

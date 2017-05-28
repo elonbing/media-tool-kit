@@ -10,8 +10,8 @@ Reads a line off of a text file. That's it.
 python line-reader__text.py \
   --text-file-input="source.txt" \
   --number-of-lines="(1,6)" \
-  --print-to-file="yes" \
-  --output-dir="media/text"
+  --output-dir="media/text" \
+  --print-to-file
 ```
 ## Arguments
 
@@ -23,10 +23,10 @@ The source text file for the script.
 
 The number of lines that you want printed out. For a variable number, use `(x,y)`.
 
-`---print-to-file="  "`
-
-Using `yes` will output as a .txt. No prints it in the console. Use no when using in other scripts.
-
 `--output-dir="  "`
 
 Not specifying an output directory outputs a .txt in the directory that the script is in.
+
+`--save-to-file`
+
+Using this flag will output generated text as a .txt file.
