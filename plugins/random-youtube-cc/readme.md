@@ -39,14 +39,16 @@ The minimum length in characters for a caption. This was included so that we cou
 
 The amount of lines scraped from a single video. Setting this to a higher number gives higher performance but cuts down on the output’s “randomness”.
 
-`--output-dir=" "`
+`--output-dir="   "`
 
-This can either point to a set of words (eg. `(word, word, word)`) or point to a whitelist. There is an example already set up for you :-).
+The directory that the completed thing will output to.
 
 `--capitalize`
+
 Setting this flag will capitalize the first letter of each line.
 
 `--save-to-file`
+
 Setting this flag will print the as a .txt file.
 
 ## Development Notes

@@ -26,9 +26,9 @@ This plugin uses the Facebook API. You will need to have a Facebook account in o
 
 Limits the output to a certain range of characters.
 
-`--output-dir="  "`
+`--output-dir="   "`
 
-Not specifying an output directory outputs a .txt in the directory that the script is in.
+The directory that the completed thing will output to.
 
 `--save-to-file`
 
