@@ -1,6 +1,8 @@
 # Youtube Poetry
 
-Generates a "poem" from closed captions of random YouTube Videos. Based off of Hamburger Music - http://hamburgermusic.tumblr.com
+Generates a "poem" from closed captions of random YouTube Videos. 
+
+Originally designed for http://hamburgermusic.tumblr.com
 
 ![hamburgermusic](image.png)
 
