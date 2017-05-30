@@ -39,14 +39,14 @@ The output above is piped into a folder in the home directory called simply `/ou
 print "uploading to youtube"
 
 python youtube-upload \
-  --title="A cool vid"
+  --video-input "$LATEST-OUTPUT" \
+  --title="A cool vid" \
   --description="a description of a cool vid" \
   --category=Misc \
   --tags="mutter, beethoven" \
   --client-secrets=my_client_secrets.json \
   --credentials-file=my_credentials.json \
-  --playlist "My favorite music" \
-  $LATEST-OUTPUT
+  --playlist "My favorite music" \  
 ```
 We'll then use the output of the previous script and call it into the `upload-to-youtube` script by using a built in variable `$LATEST-OUTPUT`.
 
