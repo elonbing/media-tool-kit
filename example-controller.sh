@@ -11,6 +11,7 @@
 ########################################################
 
 # Initialize
+# make this into a function?
 source variables
 cat ascii.txt
 echo "executing script..."
@@ -36,7 +37,7 @@ echo "uploading to youtube"
 
 python youtube-upload \
   --title="A.S. Mutter"
-  --description="A.S. Mutter plays Beethoven" \
+  --description="$(python plugins/line-reader/line-reader.py)" \
   --category=Music \
   --tags="mutter, beethoven" \
   --recording-date="2011-03-10T15:32:17.0Z" \
@@ -45,4 +46,4 @@ python youtube-upload \
   --client-secrets=my_client_secrets.json \
   --credentials-file=my_credentials.json \
   --playlist "My favorite music" \
-  anne_sophie_mutter.flv
+  $LATEST-OUTPUT
