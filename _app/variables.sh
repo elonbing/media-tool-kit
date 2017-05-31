@@ -18,17 +18,12 @@ arg1="${1:-}"
 # Control Script Tools
 # //////////////////////////////
 
-# Init Function
+# Initialize
 initialize_mtk () {
   echo "initializing Media Tool Kit";
   cat splash.txt;
 }
 
-# Test Function
-# initialize_mtk
-
-# Test function as variable
-echo "this is a function $(initialize_mtk) in a variable"
 
 # Select Random File in Directory
 RANDOM_FILE_IN_DIR="$(ls | head -$((RANDOM%$(ls | wc -w)+1)) | tail -1)"
@@ -39,7 +34,7 @@ RECENT_FILE_IN_DIR="$(ls -t | head -n1)"
 # Random Integer
 RANDOM_NUM="$((1 + RANDOM % 9))"
 
-# Assorted Tests
+# Assorted Tests (delete these)
 # //////////////////////////////
 
 # Test Bash Variables Within Variables
@@ -49,3 +44,6 @@ RANDOM_NUM="$((1 + RANDOM % 9))"
 
 # Example printing the output of a python script inside of a bash command
 #echo "$(python example.py)"
+
+# Test function as variable
+# echo "this is a function $(initialize_mtk) in a variable"

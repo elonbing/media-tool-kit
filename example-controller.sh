@@ -28,7 +28,7 @@ python blend__video.py \
 
 # Upload to Youtube
 # //////////////////////////////
-echo "uploading to youtube"
+echo "uploading video to youtube..."
 
 python youtube-upload \
   --title="$(python plugins/linereader/linereader.py)"
