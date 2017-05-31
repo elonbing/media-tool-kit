@@ -1,7 +1,9 @@
 #!/bin/bash
+source _app/variables.sh
+initialize_mtk
 
 ########################################################
-# Media Tool Kit Controller
+# Title of Project
 # --------------------------------
 # This is the main script that will power your creation.
 # Refer to the documentation (readme.md) for any questions
@@ -9,12 +11,6 @@
 # arguments.
 #
 ########################################################
-
-# Initialize
-source variables
-cat ascii.txt
-echo "executing script..."
-
 
 # Blend Video
 # //////////////////////////////
@@ -35,8 +31,8 @@ python blend__video.py \
 echo "uploading to youtube"
 
 python youtube-upload \
-  --title="A.S. Mutter"
-  --description="A.S. Mutter plays Beethoven" \
+  --title="$(python plugins/linereader/linereader.py)"
+  --description="$(python plugins/linereader/linereader.py)" \
   --category=Music \
   --tags="mutter, beethoven" \
   --recording-date="2011-03-10T15:32:17.0Z" \
