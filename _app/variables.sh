@@ -21,7 +21,7 @@ arg1="${1:-}"
 # Initialize
 initialize_mtk () {
   echo "initializing Media Tool Kit";
-  cat splash.txt;
+  cat _app/splash.txt;
 }
 
 
