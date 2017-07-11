@@ -48,7 +48,7 @@ Those three folders correspond to video hierarchy in the layering process, layer
 
 `--vid-input-dir="  "`
 
-This should point to a folder with three sub-folders "layer0", "layer1", and "layer2". The folder can live anywhere, but the names are hard coded to correspond to their position, with "layer0" being the top-most frame.
+This should point to the parent folder with the `/layer-1`, `/layer-2`, and `/layer-3` subfolders. The folder can live anywhere, but the names are hard coded to correspond to their position, with "layer-1" being the top-most frame.
 
 `--vid-duration="  "`
 
