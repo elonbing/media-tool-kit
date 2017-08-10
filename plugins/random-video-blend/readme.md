@@ -18,10 +18,22 @@ python blend__video.py \
   --opacity=".4" \
   --blend-mode-1="overlay" \
   --blend-mode-2="harden" \
+  --color-key-color-1="ffffff" \
+  --color-key-simularity-1=".3" \
+  --color-key-blend-1=".9" \
   --output-dir="output" \
-  --layers="yes" \
+  --layers \
  &&
  ```
+ 
+## Process
+The script should follow the following set of steps.
+
+- Randomly select videos 1, 2 and 3.
+- Blend video 1 and 2 using `blend-mode-1`
+- If a color key flag is included, apply it to the result of 1 and 2
+- Place the result of 1 and 2 over video 3.
+- Blend that video with video 3
 
 ## Arguments
 
@@ -34,9 +46,9 @@ These arguments are used to input audio or video into the script. You can point 
 
 
 ### Settings
-`--layers="  "`
+`--layers`
 
-Including this argument will allow you to control video layers in the script. Setting the value to `"no"` will deactivate this feature.
+Including this flag will allow you to control video layers in the script. This feature is deactivated by default.
 
 If you want to use this feature, do the following steps:
 
@@ -65,6 +77,20 @@ The script first blends two videos together. This argument handles what that ble
 `--blend-mode-2="name-of-blend-mode"`
 
 The script then blends the two first videos with the third. This handles what blend mode is used in that operation.
+
+### Advanced Blending
+To make the blends deeper, we can use FFMPEG's `colorkey` feature: https://ffmpeg.org/ffmpeg-filters.html#colorkey
+
+The following arguments can be used in this script:
+
+`--chroma-key-color=""`
+This accepts a hex value and targets it for transparency.
+
+`--chroma-key-simularity=" . "`
+This value accepts an integer from 0 to 1 and sets how sensitive the filter is.
+
+`--chroma-key-blend=".9"`
+This value accepts an integer from 0 to 1 and sets the opacity of the targeted color.
 
 ### Outputs
 `--output-dir="path/to/output"`
