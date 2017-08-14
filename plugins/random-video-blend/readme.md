@@ -1,39 +1,45 @@
-# random-video-blend
-Randomly blends 3 videos from a specified folder.
+# Video Blender
+Randomly blends a number of videos from a defined folder using FFMPEG.
 
 ![illustration](image.png)
 
 ## Example Usage
 
 ```
-# Blend Video
-# //////////////////////////////
-
-print "blending video..."
-
 python blend__video.py \
-  --audio-input="media/audio" \
   --vid-input-dir="media/video" \
+  --audio-input="media/audio" \
+  --number-of-vids="3" \
+  --vid-size="(640,480)" \
   --vid-duration="(30,60)" \
-  --opacity=".4" \
-  --blend-mode-1="overlay" \
-  --blend-mode-2="harden" \
-  --color-key-color-1="ffffff" \
-  --color-key-simularity-1=".3" \
-  --color-key-blend-1=".9" \
-  --output-dir="output" \
-  --layers \
- &&
+  --blend-mode="overlay" \
+  --color-key-color="ffffff" \
+  --color-key-simularity=".3" \
+  --color-key-opacity=".9" \
+  --output-dir="/output" \
  ```
- 
-## Process
-The script should follow the following set of steps.
 
-- Randomly select videos 1, 2 and 3.
-- Blend video 1 and 2 using `blend-mode-1`
-- If a color key flag is included, apply it to the result of 1 and 2
-- Place the result of 1 and 2 over video 3.
-- Blend that video with video 3
+## Task List (Dev)
+Below is an example of the steps that the script should take when run.
+
+1. Check `--audio-input` value
+   - If a directory is entered, select random file within that directory
+2. Check `video-input-dir` value
+3. Check `--number-of-vids` value
+4. Go into `--video-input-dir` and select the number of videos specified in `--number-of-vids`
+5. Check `--vid-duration` value
+6. Randomly crop the selected videos based on `--vid-duration` value
+7. Check `--vid-size`
+8. Apply `--vid-size` attributes to cropped videos.
+9. Set one of the videos to be set as the "base", or lowest layer video. This video will not be affected by blending.
+10. Check `blend-mode`
+11. Begin blending videos
+12. After all videos are blended, check `--color-key` value
+13. Apply `--color-key` attributes to final blended videos
+14. Place final blended and color keyed video on top of base video
+15. Crop audio track to value of `vid-duration`
+16. Place audio track on video
+17. Output final video
 
 ## Arguments
 
@@ -42,55 +48,59 @@ The script should follow the following set of steps.
 
 `--vid-input-dir="  "`
 
-These arguments are used to input audio or video into the script. You can point `--audio-input` to a file or to a directory (where it will select a random file)
+These arguments are used to input audio or video into the script. You can point `--audio-input` to a file or to a directory (where it will select a single, random file).
 
 
-### Settings
-`--layers`
+### Video Settings
+`--number-of-vids=" "`
+The number of videos that will be randomly blended.
 
-Including this flag will allow you to control video layers in the script. This feature is deactivated by default.
+`--vid-size="(width,height)"`
+This determines the size and overall resolution of the outputted video. All videos that are inputted through the script will scale to this resolution.
 
-If you want to use this feature, do the following steps:
-
-1. Create a directory (call it whatever you want)
-2. Make three sub-directories called layer-1, layer-2 and layer-3
-3. Link the directory to `output-dir`
-
-Those three folders correspond to video hierarchy in the layering process, layer-1 being on top.
-
-`--vid-input-dir="  "`
-
-This should point to the parent folder with the `/layer-1`, `/layer-2`, and `/layer-3` subfolders. The folder can live anywhere, but the names are hard coded to correspond to their position, with "layer-1" being the top-most frame.
-
-`--vid-duration="  "`
+`--vid-duration="(min-time,max-time)"`
 
 How long you want the outputted clips to be. This is measured in seconds. It can either be a single number -- `(60)` or a range -- `(60,120)`.
 
-`--opacity=""`
+---
+**TO BE INCLUDED LATER**
+`--layers`
+To give you some control over how videos are layered, you can include this flag.
 
-The opacity of the videos to be blended.
+**If you want to use this feature, do the following:**
 
-`--blend-mode-1="name-of-blend-mode"`
+1. Create a directory called `/layers`
+2. Make sub-directories based on the number of video layers you wish to blend. This should be the same amount as the value for the `--number-of-vids` argument.
 
-The script first blends two videos together. This argument handles what that blend mode is.
+```
+random-video-blend/
+├── /layers
+│   ├── /layer-1
+│   ├── /layer-2
+│   ├── ...
+│   ├── /layer-5
+```
+3. Set `output-dir` as `/layers`
 
-`--blend-mode-2="name-of-blend-mode"`
 
-The script then blends the two first videos with the third. This handles what blend mode is used in that operation.
+### Blend Settings
+`--opacity=" "`
+The opacity of each blended video layer.
 
-### Advanced Blending
-To make the blends deeper, we can use FFMPEG's `colorkey` feature: https://ffmpeg.org/ffmpeg-filters.html#colorkey
+`--blend-mode="  "`
+The name of the blend mode to be used. This will apply to all videos. See https://ffmpeg.org/ffmpeg-filters.html#blend_002c-tblend for list of blend types.
 
-The following arguments can be used in this script:
+`--color-key-target="  "`
+This accepts a hex value and targets it for transparency. `ffffff` is white and `000000` is black.
 
-`--chroma-key-color=""`
-This accepts a hex value and targets it for transparency.
+`--color-key-simularity="  "`
+This value determines how sensitive the color keying function will be to the color. This value accepts a floating point from 0 to 1, 0 being the least sensitive.
 
-`--chroma-key-simularity=" . "`
-This value accepts an integer from 0 to 1 and sets how sensitive the filter is.
+`--color-key-opacity="  "`
+This value accepts an integer from 0 to 1 and sets the opacity of the targeted color, 0 being totally transparent.
 
-`--chroma-key-blend=".9"`
-This value accepts an integer from 0 to 1 and sets the opacity of the targeted color.
+See https://ffmpeg.org/ffmpeg-filters.html#colorkey for more information about the `colorkey` flag and how it works.
+
 
 ### Outputs
 `--output-dir="path/to/output"`
