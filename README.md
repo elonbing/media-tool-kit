@@ -57,7 +57,7 @@ Each plug-in has it's own set of documentation so that command-line arguments an
 
 ## Plugins
 
-Plugins may be written in multiple languages, but we try to stick with Python, Javascript and Bash/Perl.
+Plugins can be written in multiple languages, but I tend to stick with Python, Javascript and Bash/Perl for now.
 
 Note that some of these scripts are modified versions of open-source and publically availiable software. When applicable the original authors are credited.
 
@@ -99,7 +99,7 @@ When adding a new script to the plugins section, make sure to follow the followi
 
 Scripts should ideally be treated as CLI's. This will make it easier for all variables to be managed directly within the main control script.
 
-Arguments should be verbose and variables should be contained within double quotes. `plugin.py --argument1="variable" --argument2="variable"``
+Arguments should be verbose and variables should be contained within double quotes. `plugin.py --argument1="variable" --argument2="variable"`
 
 
 #### Documentation
