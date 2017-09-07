@@ -1,6 +1,8 @@
 ![illustration](_app/mtk.png)
 
-Media Tool Kit is a personal framework that I use for various algorithmic art projects. I'm constantly tinkering with it and adapting it to different projects I'm working on. If you have any questions on this workflow, please feel free to submit an issue!
+Media Tool Kit is a personal framework that I use for various algorithmic art projects.
+
+I'm constantly tinkering with it and adapting it to different projects I'm working on. If you have any questions on this workflow, please feel free to submit an issue!
 
 ## How it Works
 MTK is powered through a shell script called `controller.sh`. Commands are entered chronologically and command-line arguments are split up for legibility.
