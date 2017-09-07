@@ -3,9 +3,9 @@
 Media Tool Kit is a personal framework that I use for various algorithmic art projects. I'm constantly tinkering with it and adapting it to different projects I'm working on. If you have any questions on this workflow, please feel free to submit an issue!
 
 ## How it Works
-At it's core, MTK is powered through a shell script called `controller.sh`. Commands are entered chronologically and command-line arguments are split up for legibility.
+MTK is powered through a shell script called `controller.sh`. Commands are entered chronologically and command-line arguments are split up for legibility.
 
-There are various built in variables and functions that can be used within those arguments.
+There are various built in variables and functions that can be used within those arguments to either generate random numbers or pipe in content from one command into another.
 
 To better illustrate this workflow, let's take a look at a sample control script for a program that uploads content to youtube automatically. You can follow along by opening up the `example-controller.sh` file included in the root directory.
 
@@ -47,7 +47,7 @@ python youtube-upload \
   --credentials-file=my_credentials.json \
   --playlist "My favorite music" \  
 ```
-We'll then use the output of the previous script and call it into the `upload-to-youtube` script by using a built in variable `$LATEST-OUTPUT`.
+We then use the output of the previous script and call it into the `upload-to-youtube` script by using a built in variable `$LATEST-OUTPUT`.
 
 This variable will simply look at the `/output` folder and print out the latest file in that folder.
 
