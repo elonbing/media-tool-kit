@@ -1,13 +1,13 @@
 ![illustration](_app/mtk.png)
 
-Media tool kit is a language-agnostic scripting platform for making software based art.
-
-It's based around a shell script called `controller.sh`. In it you can invoke a variety of task-specfic scripts that can help you build neat things.
+Media Tool Kit is a personal framework that I use for various algorithmic art projects. I'm constantly tinkering with it and adapting it to different projects I'm working on. If you have any questions on this workflow, please feel free to submit an issue!
 
 ## How it Works
-The control script is simply a standardized way of running terminal commands with the main goal of making things a bit more readable.
+At it's core, MTK is powered through a shell script called `controller.sh`. Commands are entered chronologically and command-line arguments are split up for legibility.
 
-Let's take a look at a sample control script. You can follow along by opening up the `example-controller.sh` file included in the root directory.
+There are various built in variables and functions that can be used within those arguments.
+
+To better illustrate this workflow, let's take a look at a sample control script for a program that uploads content to youtube automatically. You can follow along by opening up the `example-controller.sh` file included in the root directory.
 
 **In this example, the controller will:**
 1. Create video content using the `random-video-blend` plugin
