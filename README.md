@@ -1,7 +1,6 @@
-# Media Tool Kit
-Media tool kit is a language-agnostic scripting platform for making software based art.
-
 ![illustration](_app/mtk.png)
+
+Media tool kit is a language-agnostic scripting platform for making software based art.
 
 It's based around a shell script called `controller.sh`. In it you can invoke a variety of task-specfic scripts that can help you build neat things.
 
