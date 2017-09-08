@@ -59,16 +59,16 @@ Each plug-in has it's own set of documentation so that command-line arguments an
 
 ## Why I Use This
 
-By using a modular system of indepdenant plug-ins, I can reuse and combine them for projects much quicker than building things from scratch.
+By using a modular system of independent scripts / plugins, I can reuse them for future projects much more efficiently than building scripts from scratch.
 
-Plus even if someone else doesn't use this workflow (and I don't really expect many people too), there's at least a library of scripts to use for your own pleasure.
+Plus, even if this workflow isn't for you, there's at least a library of scripts to use for a number of different things.
 
 
 ## Plugins
 
 Plugins can be written in multiple languages, but I tend to stick with Python, Javascript and Bash/Perl for now.
 
-Note that some of these scripts are modified versions of open-source and publically availiable software. When applicable the original authors are credited.
+Note that some of these scripts are modified versions of open-source and publicly available software. When applicable the original authors are credited.
 
 
 ### Included Plugins
