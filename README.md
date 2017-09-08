@@ -57,6 +57,13 @@ And that's it! It's essentially a more standardized way of manually triggering s
 
 Each plug-in has it's own set of documentation so that command-line arguments and syntax can be made clear!
 
+## Why I Use This
+
+By using a modular system of indepdenant plug-ins, I can reuse and combine them for projects much quicker than building things from scratch.
+
+Plus even if someone else doesn't use this workflow (and I don't really expect many people too), there's at least a library of scripts to use for your own pleasure.
+
+
 ## Plugins
 
 Plugins can be written in multiple languages, but I tend to stick with Python, Javascript and Bash/Perl for now.
