@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -w
 
 # Autodatamosh script
 # Copyright 2009, 2010 Joe Friedl <http://joefriedl.net>

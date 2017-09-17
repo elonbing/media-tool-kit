@@ -1,14 +1,15 @@
-# Media Tool Kit
-Media tool kit is a language-agnostic scripting platform for making software based art.
-
 ![illustration](_app/mtk.png)
 
-It's based around a shell script called `controller.sh`. In it you can invoke a variety of task-specfic scripts that can help you build neat things.
+Media Tool Kit is a personal framework that I use for various algorithmic art projects.
+
+I'm constantly tinkering with it and adapting it to different projects I'm working on. If you have any questions on this workflow, please feel free to submit an issue!
 
 ## How it Works
-The control script is simply a standardized way of running terminal commands with the main goal of making things a bit more readable.
+MTK is powered through a shell script called `controller.sh`. Commands are entered chronologically and command-line arguments are split up for legibility.
 
-Let's take a look at a sample control script. You can follow along by opening up the `example-controller.sh` file included in the root directory.
+There are various built in variables and functions that can be used within those arguments to either generate random numbers or pipe in content from one command into another.
+
+To better illustrate this workflow, let's take a look at a sample control script for a program that uploads content to youtube automatically. You can follow along by opening up the `example-controller.sh` file included in the root directory.
 
 **In this example, the controller will:**
 1. Create video content using the `random-video-blend` plugin
@@ -48,7 +49,7 @@ python youtube-upload \
   --credentials-file=my_credentials.json \
   --playlist "My favorite music" \  
 ```
-We'll then use the output of the previous script and call it into the `upload-to-youtube` script by using a built in variable `$LATEST-OUTPUT`.
+We then use the output of the previous script and call it into the `upload-to-youtube` script by using a built in variable `$LATEST-OUTPUT`.
 
 This variable will simply look at the `/output` folder and print out the latest file in that folder.
 
@@ -56,11 +57,18 @@ And that's it! It's essentially a more standardized way of manually triggering s
 
 Each plug-in has it's own set of documentation so that command-line arguments and syntax can be made clear!
 
+## Why I Use This
+
+By using a modular system of independent scripts / plugins, I can reuse them for future projects much more efficiently than building scripts from scratch.
+
+Plus, even if this workflow isn't for you, there's at least a library of scripts to use for a number of different things.
+
+
 ## Plugins
 
-Plugins may be written in multiple languages, but we try to stick with Python, Javascript and Bash/Perl.
+Plugins can be written in multiple languages, but I tend to stick with Python, Javascript and Bash/Perl for now.
 
-Note that some of these scripts are modified versions of open-source and publically availiable software. When applicable the original authors are credited.
+Note that some of these scripts are modified versions of open-source and publicly available software. When applicable the original authors are credited.
 
 
 ### Included Plugins
@@ -100,7 +108,7 @@ When adding a new script to the plugins section, make sure to follow the followi
 
 Scripts should ideally be treated as CLI's. This will make it easier for all variables to be managed directly within the main control script.
 
-Arguments should be verbose and variables should be contained within double quotes. `plugin.py --argument1="variable" --argument2="variable"``
+Arguments should be verbose and variables should be contained within double quotes. `plugin.py --argument1="variable" --argument2="variable"`
 
 
 #### Documentation

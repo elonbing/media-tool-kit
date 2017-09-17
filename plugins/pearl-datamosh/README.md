@@ -111,10 +111,15 @@ cat input.avi | ./autodatamosh.pl -dprob .5 -dmin 5 -dmax 30 > output.avi
 Here's a snippet you can use in your control script using the standard Media Tool Kit syntax.
 
 ```
-perl ./datamosh.pl \
-  -i /path/to/input.avi \
-  -dprob .5 \
-  -dmin 5 \
-  -dmax 30 \
-  > /path/to/output.avi
+# Datamosh Video
+# //////////////////////////////
+
+print "datamoshing video..."
+
+perl plugins/datamosh-video/datamosh.pl \
+	-i /path/to/input.avi \
+	-dprob .5 \
+	-dmin 5 \
+	-dmax 30 \
+	> /path/to/output.avi
 ```
